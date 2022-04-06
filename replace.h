@@ -3,7 +3,7 @@
 #pragma once
 
 #include <string.h> // strlen(), strcpy()
-#include <stdlib.h> // malloc, free()
+#include <stdlib.h> // malloc(), free()
 
 /**
  * @brief replace all occurences of a substring in a string by reference
