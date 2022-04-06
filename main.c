@@ -9,6 +9,6 @@ int main()
     replace(text, rep, with);
     // "!" is to see if there is any character in the end of the string
     // to make sure the code runs properly
-    printf("%s!", text); // prints "Hello Universe!"
+    printf("%s", text); // prints "Hello Universe!"
     return 0;
 }
