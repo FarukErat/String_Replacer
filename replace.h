@@ -2,7 +2,8 @@
 #define REPLACE_H
 #pragma once
 
-#include <string.h> // strlen, strcpy
+#include <string.h> // strlen(), strcpy()
+#include <stdlib.h> // malloc, free()
 
 /**
  * @brief replace all occurences of a substring in a string by reference
@@ -13,11 +14,11 @@
  */
 void replace(char text[], char rep[], char with[])
 {
-	int count = 0;				// to compare the length of rep and with
-	int textLen = strlen(text); // length of text
-	int repLen = strlen(rep);	// length of the text to be replaced
-	int withLen = strlen(with); // length of the text to replace with
-	char copyText[textLen];		// copy of text to save a copy for later use
+	int count = 0;											 // to compare the length of rep and with
+	int textLen = strlen(text);								 // length of text
+	int repLen = strlen(rep);								 // length of the text to be replaced
+	int withLen = strlen(with);								 // length of the text to replace with
+	char *copyText = (char *)malloc(sizeof(char) * textLen); // copy of text to save a copy for later use
 	strcpy(copyText, text);
 	for (int i = 0; i < textLen; i++)
 	{
@@ -62,6 +63,7 @@ void replace(char text[], char rep[], char with[])
 		// reset count
 		count = 0;
 	}
+	free(copyText);
 	return;
 }
 
