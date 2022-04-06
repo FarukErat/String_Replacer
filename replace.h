@@ -1,5 +1,6 @@
 #ifndef REPLACE_H
 #define REPLACE_H
+#pragma once
 
 #include <string.h> // strlen, strcpy
 
