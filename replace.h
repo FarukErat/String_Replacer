@@ -63,7 +63,7 @@ void replace(char text[], char rep[], char with[])
 		// reset count
 		count = 0;
 	}
-	free(copyText);
+	free(copyText); // deallocate the memory
 	return;
 }
 
