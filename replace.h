@@ -1,7 +1,10 @@
 #ifndef REPLACE_H
 #define REPLACE_H
 #pragma once
-
+// TODO: change the first parameter text with char**
+// TODO: to replace the passed address which the pointer text points to
+// TODO: to avoid memory leakage, first allocate memory for the new string
+// TODO: and then copy the new string to the address which the pointer text points to
 #include <string.h> // strlen(), strcpy()
 #include <stdlib.h> // malloc(), free()
 
